@@ -13,7 +13,7 @@
                 <mxCell id="10" value="Passages" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
                     <mxGeometry x="650" y="60" width="280" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="title(シナリオタイトル)&#10;environment(プレイ環境)&#10;evaluation(評価)&#10;date(日付)&#10;user" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="10">
+                <mxCell id="11" value="title(シナリオタイトル)&#10;environment(プレイ環境)&#10;evaluation(評価)&#10;date(日付)&#10;user&#10;scenario" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="10">
                     <mxGeometry y="30" width="280" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="Users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
