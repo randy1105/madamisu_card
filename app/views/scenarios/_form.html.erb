@@ -1,0 +1,25 @@
+<%= form_with model: scenario, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "シナリオ名" %><br />
+    <%= f.text_field :title, class: :title_text, id:"scenario_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :catch_copy, "シナリオ概要" %><br />
+    <%= f.text_area :explanation, class: :form__text, id:"scenario_explanation" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :people, "人数" %><br />
+    <%= f.collection_select(:people_id, People.all, :id, :name,{}, {class:"select-box", id:"scenario_people"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "シナリオの画像" %><br />
+    <%= f.file_field :image, id:"scenario_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>

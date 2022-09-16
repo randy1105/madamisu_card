@@ -9,18 +9,24 @@
   </div>
   <div class="main-box">
     <div class="num">
-      登録シナリオ数は○○です
+      登録シナリオ数は<%= @scenarios.count %>話です。
     </div>
     <div class="scenarios">
       <div class="s-title">
         <div class="calm">
           タイトル
         </div>
+        <% @scenarios.each do |scenario| %>
+          <%= link_to scenario.title, "#" %>
+        <% end %>
       </div>
       <div class="people">
         <div class="calm">
           人数
         </div>
+        <% @scenarios.each do |scenario| %>
+          <%= scenario.people.name %>
+        <% end %>
       </div>
     </div>
   </div>

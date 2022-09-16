@@ -157,6 +157,22 @@ a {
   width: 300px;
 }
 
+/* 新規シナリオ投稿画面 */
+
+.new-top {
+  height: 85vh;
+}
+
+.new-inner {
+  height: 100%;
+  background-color: aqua;
+  margin: 0 auto;
+  width: 500px;
+  border-radius: 10px;
+}
+
+
+
 
 /* フッター */
 
@@ -172,11 +188,17 @@ a {
 
 /* フォーム周り */
 .form__wrapper{
-  min-height: calc(100vh - 161px);
+  height: 100%;
+}
+
+.title_text {
+  width: 70%;
+  height: 30px;
 }
 
 .form__text {
-  width: 50%;
+  width: 100%;
+  height: 100px;
 }
 
 .field{
