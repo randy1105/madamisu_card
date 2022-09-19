@@ -1,0 +1,23 @@
+<main class="main">
+  <div class="left-page">
+    <div class="image-box">
+      <%= image_tag @scenario.image, class: "scenario-image" %>
+    </div>
+    <div class="production-name">
+      <%= @scenario.production %>
+    </div>
+  </div>
+  <div class="right-page">
+    <div class="title-box" >
+      <%= @scenario.title %>
+    </div>
+    <div class="explanation-box">
+      <%= @scenario.explanation %>
+    </div>
+    <div class="people-box">
+      プレイ人数：<%= @scenario.people.name %>人
+    </div>
+  </div>
+
+
+</main>

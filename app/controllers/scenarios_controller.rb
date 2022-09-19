@@ -1,4 +1,5 @@
 class ScenariosController < ApplicationController
+
   def index
     @scenarios = Scenario.all
   end
@@ -16,9 +17,14 @@ class ScenariosController < ApplicationController
     end
   end
 
+  def show
+    @scenario = Scenario.find(params[:id])
+  end
+
+
   private 
 
   def scenario_params
-    params.require(:scenario).permit(:title, :explanation, :people_id, :image).merge(user_id: current_user.id)
+    params.require(:scenario).permit(:title, :production, :explanation, :people_id, :image).merge(user_id: current_user.id)
   end
 end

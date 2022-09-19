@@ -154,7 +154,11 @@ a {
 }
 
 .people {
-  width: 300px;
+  width: 150px;
+}
+
+.production {
+  width: 150px;
 }
 
 /* 新規シナリオ投稿画面 */
@@ -171,7 +175,61 @@ a {
   border-radius: 10px;
 }
 
+/* シナリオ詳細ページ */
+.left-page {
+  width: 40vw;
+  height: 100%;
+}
 
+.image-box {
+  width: 400px;
+  height: 400px;
+  margin: 40px auto;
+  display: flex;
+}
+
+.scenario-image {
+  align-items: center;
+  justify-content: center;
+}
+
+
+.production-name {
+  width: 400px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 25px;
+
+}
+
+.right-page {
+  width: 60vw;
+  height: 100%;
+}
+
+.title-box {
+  background-color: #fff;
+  width: 80%;
+  height: 50px;
+  margin: 40px auto 10px;
+  font-size: 30px;
+  border-bottom: solid 3px black;
+}
+
+.explanation-box {
+  width: 80%;
+  height: 350px;
+  margin: 0 auto 20px;
+  font-size: 20px;
+}
+
+.people-box {
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 20px;
+
+}
 
 
 /* フッター */
