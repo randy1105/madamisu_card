@@ -20,7 +20,7 @@
           <% if user_signed_in? %> 
             <div class="nav__right"> 
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              <%= link_to "通過シナリオを追加する", "#", class: :nav__btn %> 
+              <%= link_to "通過シナリオを追加する", new_passage_path, class: :nav__btn %> 
               <%= link_to "シナリオを追加する", new_scenario_path, class: :nav__btn %> 
             </div>
           <% else %>

@@ -115,13 +115,14 @@ a {
   background-color: azure;
   margin: 50px auto;
   width: 900px;
-  height: 500px;
+  height: 70vh;
   display: flex;
   text-align: center;
+  overflow: scroll;
 }
 
 .title {
-  width: 550px;
+  width: 500px;
 }
 
 .environment {
@@ -132,8 +133,8 @@ a {
   width: 150px;
 }
 
-.play-date {
-  width: 150px;
+.play_date {
+  width: 100px;
 }
 
 .calm {
@@ -144,9 +145,10 @@ a {
   background-color: azure;
   margin: 50px auto;
   width: 900px;
-  height: 500px;
+  height: 70vh;
   display: flex;
   text-align: center;
+  overflow: scroll;
 }
 
 .s-title {
@@ -159,6 +161,20 @@ a {
 
 .production {
   width: 150px;
+}
+
+.user_box {
+  background-color: azure;
+  margin: 50px auto;
+  width: 500px;
+  height: 70vh;
+  display: flex;
+  text-align: center;
+  overflow: scroll;
+}
+
+.user_name {
+  width: 100%;
 }
 
 /* 新規シナリオ投稿画面 */
@@ -221,6 +237,7 @@ a {
   height: 350px;
   margin: 0 auto 20px;
   font-size: 20px;
+  overflow: scroll;
 }
 
 .people-box {

@@ -11,27 +11,39 @@
     <div class="num">
       登録シナリオ数は<%= @scenarios.count %>話です。
     </div>
-    <% @scenarios.each do |scenario| %>
-      <div class="scenarios">
-        <div class="s-title">
-          <div class="calm">
-            タイトル
-          </div>
-          <%= link_to scenario.title, scenario_path(scenario.id) %>
+    
+    <div class="scenarios">
+      <div class="s-title">
+        <div class="calm">
+          タイトル
         </div>
-        <div class="production">
-          <div class="calm">
-            作者
+        <% @scenarios.each do |scenario| %>
+          <div class="record">
+            <%= link_to scenario.title, scenario_path(scenario.id) %>
           </div>
-          <%= scenario.production %>
-        </div>
-        <div class="people">
-          <div class="calm">
-            人数
-          </div>
-          <%= scenario.people.name %>
-        </div>
+        <% end %>
       </div>
-    <% end %>
+      <div class="production">
+        <div class="calm">
+          作者
+        </div>
+        <% @scenarios.each do |scenario| %>
+          <div class="record">
+            <%= scenario.production %>
+          </div>
+        <% end %>
+      </div>
+      <div class="people">
+        <div class="calm">
+          人数
+        </div>
+        <% @scenarios.each do |scenario| %>
+          <div class="record">
+            <%= scenario.people.name %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  
   </div>
 </div>

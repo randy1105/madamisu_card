@@ -1,0 +1,25 @@
+<%= form_with model: passage, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "シナリオ名" %><br />
+    <%= f.collection_select(:title_id, Scenario.all, :id, :title,{}, {class:"select-box", id:"scenario_people"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :environment, "環境" %><br />
+    <%= f.collection_select(:environment_id, Environment.all, :id, :name ,{}, {class:"select-box", id:"scenario_people"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :evaluation, "シナリオ評価" %><br />
+    <%= f.collection_select(:evaluation_id, Evaluation.all, :id, :name ,{}, {class:"select-box", id:"scenario_people"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :play_date, "予定" %><br />
+    <%= f.collection_select(:play_date_id, PlayDate.all, :id, :name,{}, {class:"select-box", id:"scenario_people"}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>

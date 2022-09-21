@@ -9,16 +9,28 @@
   </div>
   <div class="main-box">
     <div class="num">
-         ユーザー一覧
+         <%= @user.nickname %>さんの通過シナリオ数は○○です 
     </div>
-    <div class="user_box">
-      <div class="user_name">
+    <div class="pass">
+      <div class="title">
         <div class="calm">
-          ユーザー名
+          タイトル
         </div>
-        <% @users.each do |user| %>
-        <%= link_to user.nickname, passage_path(user.id) %>
-        <% end %>
+      </div>
+      <div class="environment">
+        <div class="calm">
+          環境
+        </div>
+      </div>
+      <div class="evaluation">
+        <div class="calm">
+          シナリオ評価
+        </div>
+      </div>
+      <div class="play_date">
+        <div class="calm">
+          予定
+        </div>
       </div>
     </div>
   </div>
