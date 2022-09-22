@@ -16,6 +16,9 @@
         <div class="nav">
           <div class="nav__left">
             <%= link_to "マダミス名刺", root_path %>
+            <% if user_signed_in? %> 
+              <%= current_user.nickname %>
+            <% end %>
           </div>
           <% if user_signed_in? %> 
             <div class="nav__right"> 
