@@ -1,7 +1,7 @@
 <%= form_with model: passage, local: true do |f|%>
   <div class="field">
     <%= f.label :title, "シナリオ名" %><br />
-    <%= f.collection_select(:title_id, Scenario.all, :id, :title,{}, {class:"select-box", id:"scenario_people"}) %>
+    <%= f.collection_select(:title, Scenario.all, :title, :title,{}, {class:"select-box", id:"scenario_people"}) %>
   </div>
 
   <div class="field">

@@ -1,6 +1,7 @@
 <div class="main">
   <div class="side-box">
    <ul class="lists">
+      <%= link_to "ユーザー一覧", passages_path, class: "list" %>
       <%= link_to "シナリオ一覧", scenarios_path, class: "list" %>
       <li class="list"><a href="#">カレンダー</a></li>
       <li class="list"><a href="#">お知らせ</a></li>
@@ -9,29 +10,45 @@
   </div>
   <div class="main-box">
     <div class="num">
-         <%= @user.nickname %>さんの通過シナリオ数は○○です 
+         <%= @user.nickname %>さんの通過シナリオ数は<%= @passages.count %>話です。 
     </div>
-    <div class="pass">
-      <div class="title">
-        <div class="calm">
+    <div class="passage_pass">
+      <div class="top_pass">
+        <div class="title">
           タイトル
         </div>
-      </div>
-      <div class="environment">
-        <div class="calm">
+        <div class="environment">
           環境
         </div>
-      </div>
-      <div class="evaluation">
-        <div class="calm">
+        <div class="evaluation">
           シナリオ評価
         </div>
-      </div>
-      <div class="play_date">
-        <div class="calm">
+        <div class="play_date">
           予定
         </div>
+        <div class="des_btn">
+          削除ボタン
+        </div>
       </div>
+      <% @passages.each do |passage| %>
+        <div class="bottom_pass">
+          <div class="title">
+            <%= passage.title %>
+          </div>
+          <div class="environment">
+            <%= passage.environment.name %>
+          </div>
+          <div class="evaluation">
+            <%= passage.evaluation.name %>
+          </div>
+          <div class="play_date">
+            <%= passage.play_date.name %>
+          </div>
+          <% if current_user.id == @user.id  %>
+            <%= link_to "削除", passage_path(passage.id), method: :delete, class:"passage-des" %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

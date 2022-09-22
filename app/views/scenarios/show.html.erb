@@ -1,23 +1,28 @@
-<main class="main">
-  <div class="left-page">
-    <div class="image-box">
-      <%= image_tag @scenario.image, class: "scenario-image" %>
+<main class="show_main">
+  <div class="page">
+    <div class="left-page">
+      <div class="image-box">
+        <%= image_tag @scenario.image, class: "scenario-image" %>
+      </div>
+      <div class="production-name">
+        <%= @scenario.production %>
+      </div>
     </div>
-    <div class="production-name">
-      <%= @scenario.production %>
+    <div class="right-page">
+      <div class="title-box" >
+        <%= @scenario.title %>
+      </div>
+      <div class="explanation-box">
+        <%= simple_format(@scenario.explanation) %>
+      </div>
+      <div class="people-box">
+        プレイ人数：<%= @scenario.people.name %>人
+      </div>
     </div>
   </div>
-  <div class="right-page">
-    <div class="title-box" >
-      <%= @scenario.title %>
+  <% if user_signed_in? %>
+    <div class="passage_btn">
+      <%= link_to "通過シナリオに追加する", new_passage_path(@scenario.id), class: :nav__logout %>
     </div>
-    <div class="explanation-box">
-      <%= @scenario.explanation %>
-    </div>
-    <div class="people-box">
-      プレイ人数：<%= @scenario.people.name %>人
-    </div>
-  </div>
-
-
+  <% end %>
 </main>

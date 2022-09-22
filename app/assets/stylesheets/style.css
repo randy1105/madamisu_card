@@ -90,6 +90,10 @@ a {
   display: flex;
 }
 
+.page {
+  display: flex;
+}
+
 .side-box {
   margin: 10px;
   width: 150px;
@@ -97,6 +101,11 @@ a {
   background-color: rgb(222, 157, 96);
   padding: 20px 10px;
   text-align: center;
+}
+
+.lists {
+  display: flex;
+  flex-flow: column;
 }
 
 .list {
@@ -121,6 +130,24 @@ a {
   overflow: scroll;
 }
 
+.passage_pass {
+  background-color: azure;
+  margin: 50px auto;
+  width: 1000px;
+  height: 70vh;
+  text-align: center;
+  overflow: scroll;
+}
+
+.top_pass {
+  display: flex;
+  border-bottom: solid 1px black;
+}
+
+.bottom_pass {
+  display: flex;
+}
+
 .title {
   width: 500px;
 }
@@ -137,6 +164,15 @@ a {
   width: 100px;
 }
 
+.des_btn {
+  width: 100px;
+}
+
+.passage-des {
+  width: 100px;
+  text-align: center;
+}
+
 .calm {
   border-bottom: solid 1px black;
 }
@@ -144,7 +180,7 @@ a {
 .scenarios {
   background-color: azure;
   margin: 50px auto;
-  width: 900px;
+  width: 1000px;
   height: 70vh;
   display: flex;
   text-align: center;
@@ -160,7 +196,7 @@ a {
 }
 
 .production {
-  width: 150px;
+  width: 250px;
 }
 
 .user_box {
@@ -175,6 +211,11 @@ a {
 
 .user_name {
   width: 100%;
+}
+
+.name_box {
+  display: flex;
+  flex-flow: column;
 }
 
 /* 新規シナリオ投稿画面 */
@@ -192,6 +233,10 @@ a {
 }
 
 /* シナリオ詳細ページ */
+.show_main {
+  height: 87vh;
+}
+
 .left-page {
   width: 40vw;
   height: 100%;
@@ -246,6 +291,11 @@ a {
   margin: 0 auto;
   font-size: 20px;
 
+}
+
+.passage_btn {
+  margin: 10px auto;
+  width: 200px;
 }
 
 

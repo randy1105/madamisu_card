@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2022_09_19_165629) do
   end
 
   create_table "passages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "title_id", null: false
+    t.string "title", null: false
     t.integer "environment_id", null: false
     t.integer "evaluation_id", null: false
     t.integer "play_date_id", null: false
