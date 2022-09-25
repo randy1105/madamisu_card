@@ -17,7 +17,9 @@
           <div class="nav__left">
             <%= link_to "マダミス名刺", root_path %>
             <% if user_signed_in? %> 
-              <%= current_user.nickname %>
+              <div class="log_user">
+                ユーザー名：<%= current_user.nickname %>
+              </div>
             <% end %>
           </div>
           <% if user_signed_in? %> 

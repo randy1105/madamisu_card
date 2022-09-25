@@ -20,9 +20,4 @@
       </div>
     </div>
   </div>
-  <% if user_signed_in? %>
-    <div class="passage_btn">
-      <%= link_to "通過シナリオに追加する", new_passage_path(@scenario.id), class: :nav__logout %>
-    </div>
-  <% end %>
 </main>
