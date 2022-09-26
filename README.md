@@ -8,10 +8,10 @@
 https://madamisu-card.herokuapp.com/
 
 ## テスト用アカウント
-・Basic認証パスワード：2222
-・Basic認証ID：admin
-・メールアドレス：test@com
-・パスワード：111111
+・Basic認証パスワード：2222<br>
+・Basic認証ID：admin<br>
+・メールアドレス：test@com<br>
+・パスワード：111111<br>
 
 ## 利用方法
 
