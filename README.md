@@ -1,24 +1,55 @@
-# README
+## アプリケーション名
+マダミス名刺
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション概要
+マダミスの通過シナリオを保存すし、他者と通過シナリオを共有することができる。
 
-Things you may want to cover:
+## URL
+https://madamisu-card.herokuapp.com/
 
-* Ruby version
+## テスト用アカウント
+・Basic認証パスワード：2222
+・Basic認証ID：admin
+・メールアドレス：test@com
+・パスワード：111111
 
-* System dependencies
+## 利用方法
 
-* Configuration
+### シナリオ投稿
+1,ユーザー登録をしていない場合は、新規登録をクリックしてニックネーム、メールアドレス、パスワードを入力して保存する。<br>
+2,「シナリオを追加する」をクリックして、シナリオ名、作者、シナリオ概要、プレイ人数、画像を入力して保存する。<br>
+3,シナリオ一覧ページに飛んで、保存ができているか確認する。
 
-* Database creation
+### 通過シナリオ投稿
+1,ユーザー登録をしていない場合は、新規登録をクリックしてニックネーム、メールアドレス、パスワードを入力して保存する。<br>
+2,「通過シナリオを追加する」をクリックして、シナリオ名、環境、シナリオ評価、予定を入力して保存する。<br>※プルダウンに通過シナリオがない場合は上記のシナリオ投稿を行う。
 
-* Database initialization
+##  アプリケーションを作成した背景
+マーダーミステリーというボードゲームは、シナリオの中の登場人物となり推理を行うゲームのため、同じシナリオを遊ぶことができないのが特徴。そのため、遅んだシナリオを記録できるアプリがあると便利と考えた。また、遊んだシナリオを他者に公開することでゲーム主催者がシナリオを通過したかの確認をせずに済むため募集の効率化ができる。
 
-* How to run the test suite
+## 洗い出した要件
+https://docs.google.com/spreadsheets/d/1XzCYhiWH2Vp5YiH5q0ey-4jNx_YorQGWvh464a-hn68/edit#gid=982722306<br>
+※赤字部分は随時実装となります。
 
-* Services (job queues, cache servers, search engines, etc.)
+## データベース設計
+![madamisu](https://user-images.githubusercontent.com/110330965/192180152-d2b32dc1-b39d-414a-94bb-45fa89b1e4b1.png)
 
-* Deployment instructions
+## 画面遷移図
+![画面遷移図](https://user-images.githubusercontent.com/110330965/192181446-fc8998c0-df66-4a9e-bdbe-cfcddc5c8815.png)
 
-* ...
+## 開発環境
+・フロントエンド<br>
+・バックエンド<br>
+・インフラ<br>
+・テキストエディタ<br>
+・タスク管理<br>
+
+## ローカルでの動作方法
+以下のコマンドを順に実行。<br>
+% git clone https://github.com/randy1105/madamisu_card.git<br>
+% cd madamisu_card<br>
+% bundle install<br>
+% yarn install<br>
+
+## 工夫したポイント
+プレイしたシナリオをメモすることが主目的のため、人によって登録名が変わる（略称や別称）ことを危惧し、シナリオ登録機能を実装した。また、通過シナリオ登録時に新規登録したシナリオをプルダウンで表示して選択できるようにしたため、通過シナリオの登録を簡略化することができた。
